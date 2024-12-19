@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="applicationcontext.xmlconfig.Car">
+		<constructor-arg value="BMW"></constructor-arg>
+		<constructor-arg value="123000.50"></constructor-arg>
+		<constructor-arg value="White"></constructor-arg>
+	</bean>
+	<bean id="bus" class="applicationcontext.xmlconfig.Bus">
+		<property name="name" value="Volvo"></property>
+		<property name="price" value="154163.0"></property>
+	</bean>
+	
+	<bean class="applicationcontext.dependencyinjection.Jspiders">
+		<constructor-arg ref="JavaCourse"></constructor-arg>
+	</bean>
+	<bean id="JavaCourse" class="applicationcontext.dependencyinjection.JavaCourse"></bean>
+	<bean id="MerCouse" class="applicationcontext.dependencyinjection.MernCourse"></bean>
+</beans>
